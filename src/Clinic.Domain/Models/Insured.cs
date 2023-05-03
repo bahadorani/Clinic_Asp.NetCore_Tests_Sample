@@ -17,7 +17,7 @@ namespace Clinic.Domain.Models
         }
         public int Id { get; set; }
         public Name Title { get;} = null!;
-        public string Address { get; set; }
+        public string? Address { get; set; }
         public Mobile Tell { get; } = null!;
 
         public virtual ICollection<Insurance> Insurances { get; init; } = new List<Insurance>();

@@ -7,7 +7,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A0046DC2-42F
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{63393F40-5E68-4940-9277-C3BE2EDF5250}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clinic.Domain", "src\Clinic.Domain\Clinic.Domain.csproj", "{55F670DF-69B5-46BA-A12C-28BCEBE29DF4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clinic.Domain", "src\Clinic.Domain\Clinic.Domain.csproj", "{55F670DF-69B5-46BA-A12C-28BCEBE29DF4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clinic.Persistence", "src\Clinic.Persistence\Clinic.Persistence.csproj", "{7D090A74-2394-4DC7-8A6D-95B606AD092C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,12 +21,17 @@ Global
 		{55F670DF-69B5-46BA-A12C-28BCEBE29DF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{55F670DF-69B5-46BA-A12C-28BCEBE29DF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{55F670DF-69B5-46BA-A12C-28BCEBE29DF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D090A74-2394-4DC7-8A6D-95B606AD092C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D090A74-2394-4DC7-8A6D-95B606AD092C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D090A74-2394-4DC7-8A6D-95B606AD092C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D090A74-2394-4DC7-8A6D-95B606AD092C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{55F670DF-69B5-46BA-A12C-28BCEBE29DF4} = {A0046DC2-42F5-4575-8FDC-EEC802FA8D1A}
+		{7D090A74-2394-4DC7-8A6D-95B606AD092C} = {A0046DC2-42F5-4575-8FDC-EEC802FA8D1A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9D9838E5-C627-4C70-BAEA-CE80E4B91D0B}
