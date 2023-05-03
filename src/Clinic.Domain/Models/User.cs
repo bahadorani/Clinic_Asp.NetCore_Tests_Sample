@@ -28,6 +28,7 @@ namespace Clinic.Domain.Models
         [ForeignKey("CenterId")]
         public Center Center { get; init; }=null!;
 
-
+        public virtual ICollection<Doctor> Doctors { get; init; } = new List<Doctor>();
+        public virtual ICollection<Patient> Patients { get; init; } = new List<Patient>();
     }
 }

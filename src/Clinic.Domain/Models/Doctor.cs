@@ -13,5 +13,7 @@ namespace Clinic.Domain.Models
         [ForeignKey("ExpertId")]
         public Expert? Expert { get; init; }
 
+        public virtual ICollection<Visit> Visits { get; init; } = new List<Visit>();
+
     }
 }

@@ -17,6 +17,8 @@ namespace Clinic.Domain.Models
         [ForeignKey("InsuranceId")]
         public Insurance insurance { get; init; } = null!;
 
-        public string Caption { get; set; }
+        public string? Caption { get; set; }
+
+        public virtual ICollection<Visit> Visits { get; init; } = new List<Visit>();
     }
 }
