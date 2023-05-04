@@ -29,6 +29,17 @@ namespace Clinic.Persistence.Configurations
                 .IsRequired();
             });
 
+            builder.OwnsOne(pi => pi.IdentityNumber, builder =>
+            {
+                builder.Property(p => p.Value)
+                .HasColumnName("IdentityNumber")
+                .HasColumnType("varchar(12)")
+                .HasMaxLength(12)
+                .IsRequired();
+
+                builder.HasIndex(e => new { e.Value }).IsUnique();
+            });
+
         }
     }
 }

@@ -22,6 +22,13 @@ namespace Clinic.Persistence.Configurations
                 .IsRequired();
             });
 
+            builder.OwnsOne(pi => pi.InstallmentPay, builder =>
+            {
+                builder.Property(p => p.Value)
+                .HasColumnName("InstallmentPay")
+                .HasColumnType("decimal");
+            });
+
             builder.HasOne(b => b.Doctor)
                 .WithMany(a => a.Visits)
                 .HasForeignKey(b => b.DoctorId)

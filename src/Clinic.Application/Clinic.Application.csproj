@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Command\" />
+    <Folder Include="CommandHandler\" />
+    <Folder Include="QueriesHandler\" />
+    <Folder Include="Queries\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Clinic.Domain\Clinic.Domain.csproj" />
+    <ProjectReference Include="..\Clinic.Persistence\Clinic.Persistence.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -20,6 +20,18 @@ namespace Clinic.Persistence.Configurations
                 .HasForeignKey(b => b.InsuranceId)
                 .OnDelete(DeleteBehavior.Restrict);
 
+            builder.OwnsOne(pi => pi.IdentityCart, builder =>
+            {
+                builder.Property(p => p.Value)
+                .HasColumnName("IdentityCart")
+                .HasColumnType("varchar(12)")
+                .HasMaxLength(12)
+                .IsRequired();
+
+                builder.HasIndex(e => new { e.Value }).IsUnique();
+            });
+            
+
         }
     }
 }
