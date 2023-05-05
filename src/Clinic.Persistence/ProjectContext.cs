@@ -14,7 +14,6 @@ namespace Clinic.Persistence
         public DbSet<Center> Centers { get; set; }
         public DbSet<Doctor> Doctors { get; set; }
         public DbSet<Expert> Experts { get; set; }
-        public DbSet<Insurance> Insurances { get; set; }
         public DbSet<Insured> Insureds { get; set; }
         public DbSet<Patient> Patients { get; set; }
         public DbSet<User> Users { get; set; }

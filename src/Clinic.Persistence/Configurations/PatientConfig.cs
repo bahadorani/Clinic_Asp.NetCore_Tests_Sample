@@ -15,7 +15,7 @@ namespace Clinic.Persistence.Configurations
                 .HasForeignKey(b => b.UserId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            builder.HasOne(b => b.insurance)
+            builder.HasOne(b => b.Insured)
                 .WithMany(a => a.Patients)
                 .HasForeignKey(b => b.InsuranceId)
                 .OnDelete(DeleteBehavior.Restrict);

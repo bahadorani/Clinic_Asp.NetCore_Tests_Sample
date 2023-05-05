@@ -12,7 +12,6 @@ namespace Clinic.Repository.Interfaces
         ICenterRepository CenterRepository { get; }
         IDoctorRepository DoctorRepository { get; }
         IExpertRepository ExpertRepository { get; }
-        IInsuranceRepository InsuranceRepository { get; }
         IInsuredRepository InuredRepository { get; }
         IPatientRepository PatientRepository { get; }
         IUserRepository UserRepository { get; }

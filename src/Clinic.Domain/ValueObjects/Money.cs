@@ -7,17 +7,17 @@ namespace Clinic.Domain.ValueObjects
         protected Money()
         {
         }
-        public Money(decimal? value)
+        public Money(decimal value)
         {
             ValidateMoney(value);
             Value = value;
         }
 
-        public decimal? Value { get; set; }
+        public decimal Value { get; set; }
 
-        private void ValidateMoney(decimal? value)
+        private void ValidateMoney(decimal value)
         {
-            if (value!=null && value < 0)
+            if (value < 0)
             {
                 throw new InvalidPriceException("Invalid Price");
             }

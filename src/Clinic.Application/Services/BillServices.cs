@@ -1,56 +1,37 @@
 ﻿using Clinic.Application.Services.Interfaces;
 using Clinic.Domain.Dtoes;
 using Clinic.Persistence;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Clinic.Repository.Interfaces;
 
 namespace Clinic.Application.Services
 {
     public class BillServices : IBillServices
     {
-        private readonly ProjectContext _context;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public BillServices(ProjectContext context)
+        public BillServices(IUnitOfWork unitOfWork)
         {
-            _context = context;
+            _unitOfWork = unitOfWork;
         }
 
-        public Task<BillDto> GetLiabilityPatientById(int patientId)
+        public  int GetLiabilityPatientById(int patientId)
         {
-            throw new NotImplementedException();
+           return _unitOfWork.BillRepository.GetLiabilityPatientById(patientId);
         }
 
-        public Task<BillDto> GetLiabilityPatientByIdentity(int patientIdentityId)
+        public int GetLiabilityPatientByIdentity(string patientIdentityId)
         {
-            throw new NotImplementedException();
+            return _unitOfWork.BillRepository.GetLiabilityPatientByIdentity(patientIdentityId);
         }
 
-        public Task<BillDto> GetLiabilityPatientCountById(int patientId)
+        public decimal GetPaymentOfInsuredById(int insuredId)
         {
-            throw new NotImplementedException();
+            return _unitOfWork.BillRepository.GetPaymentOfInsuredById(insuredId);
         }
 
-        public Task<BillDto> GetLiabilityPatientCountByIdentity(int patientIdentityId)
+        public decimal GetPaymentOfInsuredByNumber(string number)
         {
-            throw new NotImplementedException();
-        }
-
-        public Task<BillDto> GetPaymentOfInsuredById(int insuredId)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<BillDto> GetPaymentOfInsuredByNumber(string number)
-        {
-            throw new NotImplementedException();
-        }
-
-        private async Task Save()
-        {
-            await _context.SaveChangesAsync();
+            return _unitOfWork.BillRepository.GetPaymentOfInsuredByNumber(number);
         }
     }
 }

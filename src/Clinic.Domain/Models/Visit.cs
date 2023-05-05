@@ -8,13 +8,14 @@ namespace Clinic.Domain.Models
         protected Visit()
         {
         }
-        public Visit(decimal price, decimal? installmentPay)
+        public Visit(decimal price, decimal installmentPay)
         {
             Money  validatePrice = new Money(price);
             Price = validatePrice;
 
-            validatePrice=new Money(installmentPay);
+            validatePrice = new Money(installmentPay);
             InstallmentPay = validatePrice;
+
         }
         public int Id { get; set; }
         public string Caption { get; set; } = null!;

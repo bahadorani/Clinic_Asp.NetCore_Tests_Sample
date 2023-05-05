@@ -23,7 +23,6 @@ namespace Clinic.Domain.Models
         public Name Title { get;} = null!;
         public string? Address { get; set; }
         public Mobile Tell { get; } = null!;
-
-        public virtual ICollection<Insurance> Insurances { get; init; } = new List<Insurance>();
+        public virtual ICollection<Patient> Patients { get; init; } = new List<Patient>();
     }
 }

@@ -22,7 +22,7 @@ namespace Clinic.Domain.Models
 
         public int? InsuranceId { get; set; }
         [ForeignKey("InsuranceId")]
-        public Insurance? insurance { get; init; } 
+        public Insured? Insured { get; init; } 
 
         public string? Caption { get; set; }
 

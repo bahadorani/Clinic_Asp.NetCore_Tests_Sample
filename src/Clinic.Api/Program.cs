@@ -1,6 +1,11 @@
+using Clinic.Application.Queries;
+using Clinic.Application.Services;
+using Clinic.Application.Services.Interfaces;
 using Clinic.Persistence;
 using Clinic.Repository.Interfaces;
+using MediatR;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,6 +22,8 @@ builder.Services.AddDbContext<ProjectContext>(options =>
 });
 
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+builder.Services.AddScoped<IBillServices, BillServices>();
+builder.Services.AddMediatR(typeof(GetLiabilityPatientByIdQuery).GetTypeInfo().Assembly);
 
 var app = builder.Build();
 

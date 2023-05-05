@@ -9,8 +9,10 @@
   <ItemGroup>
     <Folder Include="Command\" />
     <Folder Include="CommandHandler\" />
-    <Folder Include="QueriesHandler\" />
-    <Folder Include="Queries\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="11.1.0" />
   </ItemGroup>
 
   <ItemGroup>

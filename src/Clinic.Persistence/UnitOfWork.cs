@@ -14,7 +14,6 @@ namespace Clinic.Persistence
             CenterRepository = new CenterRepository(_context);
             DoctorRepository = new DoctorRepository(_context);
             ExpertRepository = new ExpertRepository(_context);
-            InsuranceRepository = new InsuranceRepository(_context);
             InuredRepository = new InuredRepository(_context);
             PatientRepository = new PatientRepository(_context);
             UserRepository = new UserRepository(_context);
@@ -25,7 +24,6 @@ namespace Clinic.Persistence
         public ICenterRepository CenterRepository { get; set; }
         public IDoctorRepository DoctorRepository { get; set; }
         public IExpertRepository ExpertRepository { get; set; }
-        public IInsuranceRepository InsuranceRepository { get; set;}
         public IInsuredRepository InuredRepository { get; set; }
         public IPatientRepository PatientRepository { get; set; }
         public IUserRepository UserRepository { get; set; }
