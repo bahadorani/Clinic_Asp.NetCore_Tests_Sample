@@ -87,6 +87,7 @@ namespace Clinic.Persistence.Repositories
         }
         public decimal GetPaymentOfInsuredById(int id)
         {
+            var fg= _context.Bills.FirstOrDefault(b => b.Id == id);
             var entryPoint = (from b in _context.Bills
                               join v in _context.Visits on b.VisitId equals v.Id
                               join p in _context.Patients on v.PatientId equals p.Id
