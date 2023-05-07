@@ -1,5 +1,7 @@
 # Clinic_Asp.NetCore_Tests_Sample
-This project is best on Clean Architecture. CQRS and DDD are used in this sample.
+This project is best on Clean Architecture.
+
+CQRS and DDD are used in this sample.
 
 Integration tests and domain tests are XUnit.
 
