@@ -53,7 +53,6 @@ namespace Client.AcceptanceTest.Drivers
         {
             HttpResponseMessage result = await _httpClient.GetAsync(Routes.GetPaymentOfInsuredById + "?id=" + id);
             return 1;
-           // var response= await result.DeserializeAsync<>();
         }
 
         internal void SetDoctorInfo(Table table)
@@ -76,7 +75,7 @@ namespace Client.AcceptanceTest.Drivers
             SenarioContext.BillContext = table.CreateInstance<BillDto>();
         }
 
-        internal async Task<int> CountInstallmentWithPatientId(int id)
+        internal async Task<decimal> CountInstallmentWithPatientId(int id)
         {
             HttpResponseMessage result = await _httpClient.GetAsync(Routes.GetLiabilityPatientById + "?id=" + id);
             return 1;

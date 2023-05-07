@@ -84,7 +84,7 @@ namespace Clinic.IntegrationTest
             ApplicationDbContext.SaveChangesAsync().GetAwaiter().GetResult();
 
             Bill bill2 = new Bill(150000);
-            bill1.VisitId = 2;
+            bill2.VisitId = 2;
             bill2.Visit=visit2;
             ApplicationDbContext.Bills.Add(bill2);
             ApplicationDbContext.SaveChangesAsync().GetAwaiter().GetResult();

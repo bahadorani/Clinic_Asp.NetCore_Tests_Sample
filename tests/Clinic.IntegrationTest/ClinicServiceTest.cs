@@ -21,11 +21,21 @@ namespace Clinic.IntegrationTest
         }
 
         [Theory]
-        [InlineData(1, 0)]
-        [InlineData(2, 2)]
+        [InlineData(1, 2)]
+        [InlineData(2, 0)]
         public void should_get_liability_patient_by_id(int id, int count)
         {
             var result = _manager.GetLiabilityPatientById(id);
+
+            Assert.NotNull(result);
+            Assert.Equal(count, result);
+        }
+        [Theory]
+        [InlineData("1472583690", 2)]
+        [InlineData("9632583147", 0)]
+        public void should_get_liability_patient_by_identityCart(string  id, int count)
+        {
+            var result = _manager.GetLiabilityPatientByIdentity(id);
 
             Assert.NotNull(result);
             Assert.Equal(count, result);
