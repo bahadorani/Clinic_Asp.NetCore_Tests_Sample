@@ -9,7 +9,7 @@ Background:
 Scenario: Total payments for medical expenses of an insurance company
 	Given a insurance company with below data
 		| Id | IdentityNumber | Title | Tell        | Address |
-		| 4  | 123456789      | Asia  | 09178200336 | ------  |
+		| 4  | 1234567890      | Asia  | 09178200336 | ------  |
 	When This insurance company pays for the treatment of patients under its coverage according to the following information
 		| Id | VisitId | Payment | Date                |
 		| 1  | 6       | 50000   | 2023-01-20 10:08:06 |

@@ -16,22 +16,49 @@ namespace Clinic.Application.Services
 
         public  int GetLiabilityPatientById(int patientId)
         {
-           return _unitOfWork.BillRepository.GetLiabilityPatientById(patientId);
+            try 
+            {
+                return _unitOfWork.BillRepository.GetLiabilityPatientById(patientId);
+            }
+            catch(Exception ex) {
+                throw new InvalidOperationException(ex.Message);
+            }
         }
 
         public int GetLiabilityPatientByIdentity(string patientIdentityId)
         {
-            return _unitOfWork.BillRepository.GetLiabilityPatientByIdentity(patientIdentityId);
+            try
+            {
+                return _unitOfWork.BillRepository.GetLiabilityPatientByIdentity(patientIdentityId);
+            }
+            catch (Exception ex)
+            {
+                throw new InvalidOperationException(ex.Message);
+            }
         }
 
         public decimal GetPaymentOfInsuredById(int insuredId)
         {
-            return _unitOfWork.BillRepository.GetPaymentOfInsuredById(insuredId);
+            try
+            {
+                return _unitOfWork.BillRepository.GetPaymentOfInsuredById(insuredId);
+            }
+            catch (Exception ex)
+            {
+                throw new InvalidOperationException(ex.Message);
+            }
         }
 
         public decimal GetPaymentOfInsuredByNumber(string number)
         {
-            return _unitOfWork.BillRepository.GetPaymentOfInsuredByNumber(number);
+            try
+            {
+                return _unitOfWork.BillRepository.GetPaymentOfInsuredByNumber(number);
+            }
+            catch (Exception ex)
+            {
+                throw new InvalidOperationException(ex.Message);
+            }
         }
     }
 }
