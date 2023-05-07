@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Clinic.Domain.ValueObjects.Exceptions
 {
     [Serializable]
-    internal class InvalidNumberException : Exception
+    public class InvalidNumberException : Exception
     {
         public InvalidNumberException()
         {

@@ -5,6 +5,14 @@ namespace Clinic.Domain.Models
 {
     public class Bill
     {
+        protected Bill()
+        {
+        }
+        public Bill(decimal price)
+        {
+            Money validatePrice = new Money(price);
+            Payment = validatePrice;
+        }
         public int Id { get; set; }
         public int VisitId { get; set; }
         [ForeignKey("VisitId")]

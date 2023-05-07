@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Clinic.Domain.ValueObjects.Exceptions
 {
     [Serializable]
-    internal class InvalidPriceException : Exception
+    public class InvalidPriceException : Exception
     {
         public InvalidPriceException()
         {
