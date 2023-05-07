@@ -34,7 +34,7 @@ namespace Client.AcceptanceTest.StepDefinitions
         [Then(@"the result of The total amount paid by company ""([^""]*)"" for covered patients is ""([^""]*)"" Tomans\.")]
         public async Task ThenTheResultOfTheTotalAmountPaidByCompanyForCoveredPatientsIsTomans_Async(string p0, string p1)
         {
-            int respond = await _driver.CountInsurancePayments(int.Parse(p0));
+            decimal? respond = await _driver.CountInsurancePayments(int.Parse(p0));
             Assert.Equal(p1, respond.ToString());
         }
     }

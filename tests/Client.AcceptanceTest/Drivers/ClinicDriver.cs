@@ -49,10 +49,19 @@ namespace Client.AcceptanceTest.Drivers
             SenarioContext.InsuranceContext = table.CreateInstance<InsuranceDto>();
         }
 
-        public async Task<int> CountInsurancePayments(int id)
+        public async Task<decimal?> CountInsurancePayments(int id)
         {
             HttpResponseMessage result = await _httpClient.GetAsync(Routes.GetPaymentOfInsuredById + "?id=" + id);
-            return 1;
+            ClinicResponse response = await result.DeserializeAsync<ClinicResponse>();
+
+            if (response.Success )
+            {
+                return response.Data.InstallmentPay;
+            }
+            else
+            {
+                return 0;
+            }
         }
 
         internal void SetDoctorInfo(Table table)
@@ -75,10 +84,19 @@ namespace Client.AcceptanceTest.Drivers
             SenarioContext.BillContext = table.CreateInstance<BillDto>();
         }
 
-        internal async Task<decimal> CountInstallmentWithPatientId(int id)
+        internal async Task<int> CountInstallmentWithPatientId(int id)
         {
             HttpResponseMessage result = await _httpClient.GetAsync(Routes.GetLiabilityPatientById + "?id=" + id);
-            return 1;
+            ClinicResponse response = await result.DeserializeAsync<ClinicResponse>();
+
+            if (response.Success)
+            {
+                return response.Data.InstallmentCount;
+            }
+            else
+            {
+                return 0;
+            }
         } 
     }
 }
